@@ -48,7 +48,7 @@ public class BarcodeScanner extends Plugin implements BarcodeCallback {
 
     private BarcodeView mBarcodeView;
 
-    private int currentCameraId = Camera.CameraInfo.CAMERA_FACING_BACK;
+    private int currentCameraId = Camera.CameraInfo.CAMERA_FACING_FRONT;
 
     private boolean isScanning = false;
     private boolean shouldRunScan = false;
