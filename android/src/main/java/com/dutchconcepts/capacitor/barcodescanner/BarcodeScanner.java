@@ -153,7 +153,7 @@ public class BarcodeScanner extends Plugin implements BarcodeCallback {
         }
     }
 
-    private void prepare(boolean back) {
+    private void prepare() {
         // undo previous setup
         // because it may be prepared with a different config
         dismantleCamera();
@@ -318,7 +318,7 @@ public class BarcodeScanner extends Plugin implements BarcodeCallback {
             currentCameraId = Camera.CameraInfo.CAMERA_FACING_FRONT;
         }
 
-        prepare(back);
+        prepare();
         call.resolve();
     }
 
