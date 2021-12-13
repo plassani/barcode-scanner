@@ -125,7 +125,7 @@ export interface CameraOption {
    * If this is set to `true`, the back camera is used
    *
    * @default false
-   * @since 2.0.0
+   * @since 1.0.0
    */
   back?: boolean;
 }

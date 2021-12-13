@@ -153,7 +153,7 @@ public class BarcodeScanner extends Plugin implements BarcodeCallback {
         }
     }
 
-    private void prepare() {
+    private void _prepare() {
         // undo previous setup
         // because it may be prepared with a different config
         dismantleCamera();
@@ -225,7 +225,7 @@ public class BarcodeScanner extends Plugin implements BarcodeCallback {
                     Log.d("scanner", "No permission to use camera. Did you request it yet?");
                 } else {
                     shouldRunScan = true;
-                    prepare();
+                    _prepare();
                 }
             }
         } else {
@@ -318,7 +318,8 @@ public class BarcodeScanner extends Plugin implements BarcodeCallback {
             currentCameraId = Camera.CameraInfo.CAMERA_FACING_FRONT;
         }
 
-        prepare();
+        _prepare();
+
         call.resolve();
     }
 
