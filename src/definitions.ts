@@ -1,5 +1,5 @@
 export interface BarcodeScannerPlugin {
-  prepare(): Promise<void>;
+  prepare(options?: CameraOption): Promise<void>;
   hideBackground(): Promise<void>;
   showBackground(): Promise<void>;
   startScan(options?: ScanOptions): Promise<ScanResult>;
@@ -118,6 +118,16 @@ export interface ScanResult {
    * @since 1.0.0
    */
   content?: string;
+}
+
+export interface CameraOption {
+  /**
+   * If this is set to `true`, the back camera is used
+   *
+   * @default false
+   * @since 2.0.0
+   */
+  back?: boolean;
 }
 
 export interface CheckPermissionOptions {

@@ -7,12 +7,13 @@ import type {
   CheckPermissionOptions,
   CheckPermissionResult,
   StopScanOptions,
+  CameraOption,
 } from './definitions';
 
 export class BarcodeScannerWeb
   extends WebPlugin
   implements BarcodeScannerPlugin {
-  async prepare(): Promise<void> {
+  async prepare(_options?: CameraOption): Promise<void> {
     throw this.unimplemented('Not implemented on web.');
   }
 
